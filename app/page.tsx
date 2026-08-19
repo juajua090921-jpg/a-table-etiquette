@@ -5,7 +5,7 @@ import { AlertTriangle, ArrowRight, Check, ChefHat, CircleHelp, Globe2, Heart, L
 type Lang = 'ko' | 'fr';
 type Mission = { icon: string; title: string; rule: string; options: string[]; correct: number; answer: string; origin: string };
 const ko: Mission[] = [
-  { icon: '🖐', title: '손은 식탁 위에 두기', rule: '양손(손목까지)은 식탁 위에, 팔꿈치는 식탁에 올리지 않아요.', options: ['손을 무릎 위에 숨긴다', '손목까지 식탁 위에 둔다', '팔꿈치를 식탁 위에 올린다'], correct: 1, answer: '손목까지 식탁 위에 두기', origin: '예전 유럽 식탁에서는 손이 보이지 않으면 무언가를 숨기는 행동으로 여겨졌어요. 손을 보이게 두는 습관이 신뢰와 평온을 나타내주었습니다.' },
+  { icon: '🖐', title: '식사 중 손은 어디에 두어야 할까요?', rule: '양손의 손목은 식탁 위에 두되, 팔꿈치는 식탁에 올리지 않아요.', options: ['손을 무릎 위에 숨긴다', '손목까지 식탁 위에 둔다', '팔꿈치를 식탁 위에 올린다'], correct: 1, answer: '손목까지 식탁 위에 두기', origin: '예전 유럽 식탁에서는 손이 보이지 않으면 무언가를 숨기는 행동으로 여겨졌어요. 손을 보이게 두는 습관이 신뢰와 평온을 나타내주었습니다.' },
   { icon: '🖐', title: '잠깐 쉬는 시간에도 손은 보이게', rule: '음식을 기다리는 시간, 손을 어디에 두면 좋을까요?', options: ['무릎 아래에 두기', '식탁 위에 자연스럽게 두기', '모자 속에 숨기기'], correct: 1, answer: '식탁 위에 자연스럽게 두기', origin: '식사는 사람이 함께 있음을 확인하는 시간이었어요. 손을 보이게 하는 작은 습관이 대화와 관계에 도움이 된다고 여겨져요.' },
   { icon: '🥖', title: '빵은 테이블보 위에', rule: '개인 빵 접시가 없다면 빵은 어디에 놓을까요?', options: ['개인 접시 위', '테이블보 위에 바로', '냅킨 위'], correct: 1, answer: '테이블보 위에 바로 놓기', origin: '전통적인 프랑스 식탁에서 빵은 개인 접시에 들어가는 음식이 아니었어요. 식탁의 테이블보가 빵을 놓는 공간이 되었죠.' },
   { icon: '🥖', title: '빵을 먹을 때', rule: '빵을 먹기 전, 어떻게 준비하면 좋을까요?', options: ['칼로 큰 조각을 자른다', '손으로 한 입크기로 떼어 먹는다', '접시 중앙에 놓는다'], correct: 1, answer: '손으로 한 입크기로 떼어 먹기', origin: '빵을 손으로 떼어 먹는 방식은 공유하는 식탁에서 나온 습관입니다. 각자 필요한 만큼만 떼어 먹는 이유도 여기에 있어요.' },
@@ -14,7 +14,7 @@ const ko: Mission[] = [
 ];
 const fr: Mission[] = ko.map((m, i) => ({
   ...m,
-  title: ['Garder les mains sur la table', 'Garder les mains visibles pendant l’attente', 'Poser le pain sur la nappe', 'Rompre le pain avec les mains', 'Utiliser les couverts de l’extérieur vers l’intérieur', 'Choisir le couteau le plus éloigné'][i],
+  title: ['Où placer les mains pendant le repas ?', 'Garder les mains visibles pendant l’attente', 'Poser le pain sur la nappe', 'Rompre le pain avec les mains', 'Utiliser les couverts de l’extérieur vers l’intérieur', 'Choisir le couteau le plus éloigné'][i],
   rule: ['Les poignets restent visibles, mais les coudes restent en bas.', 'Où garder les mains en attendant le prochain plat ?', 'Sans assiette à pain, où poser le pain ?', 'Comment manger le pain ?', 'Quel couvert utiliser pour le prochain plat ?', 'Quel couteau choisir ensuite ?'][i],
   options: [['Cacher les mains sous la table', 'Garder les poignets sur la table', 'Poser les coudes sur la table'], ['Sous la table', 'Naturellement sur la table', 'Dans les poches'], ["Sur l'assiette", 'Sur la nappe', 'Sur la serviette'], ['Le couper au couteau', 'Le rompre avec les mains', 'Le poser au centre'], ['Le couvert le plus proche', 'N’importe lequel', 'Le couvert le plus éloigné'], ['Le plus éloigné', 'Le plus proche', 'Aucun couteau']][i],
   answer: ['Garder les poignets sur la table', 'Naturellement sur la table', 'Sur la nappe', 'Le rompre avec les mains', 'Le couvert le plus éloigné', 'Le plus éloigné'][i],
